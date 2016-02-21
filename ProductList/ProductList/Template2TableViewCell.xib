@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Template2TableViewCellIdentifier" rowHeight="200" id="eiE-FC-d3i" customClass="Template2TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eiE-FC-d3i" id="ww2-u4-gMn">
+                <rect key="frame" x="0.0" y="0.0" width="327" height="199"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sVD-a3-CCZ">
+                        <rect key="frame" x="0.0" y="0.0" width="327" height="179"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Ruw-N5-7sg">
+                            <size key="itemSize" width="327" height="179"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="eiE-FC-d3i" id="4v6-8K-XAS"/>
+                            <outlet property="delegate" destination="eiE-FC-d3i" id="Aaz-eE-Y4q"/>
+                        </connections>
+                    </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="g3Y-bW-N7j">
+                        <rect key="frame" x="0.0" y="164" width="327" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="WAk-rc-GYW"/>
+                        </constraints>
+                    </pageControl>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="sVD-a3-CCZ" secondAttribute="trailing" id="4I5-HE-6zn"/>
+                    <constraint firstAttribute="bottom" secondItem="sVD-a3-CCZ" secondAttribute="bottom" constant="20" id="DC6-fT-Lti"/>
+                    <constraint firstItem="g3Y-bW-N7j" firstAttribute="leading" secondItem="ww2-u4-gMn" secondAttribute="leading" id="KYI-5w-50t"/>
+                    <constraint firstItem="sVD-a3-CCZ" firstAttribute="leading" secondItem="ww2-u4-gMn" secondAttribute="leading" id="fl1-bk-bJ3"/>
+                    <constraint firstAttribute="trailing" secondItem="g3Y-bW-N7j" secondAttribute="trailing" id="iow-tM-qdM"/>
+                    <constraint firstAttribute="bottom" secondItem="g3Y-bW-N7j" secondAttribute="bottom" constant="20" id="s4b-0q-gJb"/>
+                    <constraint firstItem="sVD-a3-CCZ" firstAttribute="top" secondItem="ww2-u4-gMn" secondAttribute="top" id="zBh-d0-F6U"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="collectionView" destination="sVD-a3-CCZ" id="8VL-xL-kau"/>
+                <outlet property="pageControl" destination="g3Y-bW-N7j" id="xQr-ip-fsd"/>
+            </connections>
+            <point key="canvasLocation" x="306.5" y="335"/>
+        </tableViewCell>
+    </objects>
+</document>
