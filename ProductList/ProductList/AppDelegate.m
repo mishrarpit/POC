@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SharedCache.h"
 
 @interface AppDelegate ()
 
@@ -39,7 +40,10 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [[SharedCache defaultManager] clearGlobalCache];
 }
 
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+    [[SharedCache defaultManager] clearGlobalCache];
+}
 @end
