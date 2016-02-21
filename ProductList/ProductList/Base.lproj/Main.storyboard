@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -17,18 +17,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yND-Uc-uq4">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="yND-Uc-uq4">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WHb-lN-jgM"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pDt-yb-0Yk"/>
+                                </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yND-Uc-uq4" secondAttribute="trailing" id="BEH-oH-Pwl"/>
+                            <constraint firstItem="yND-Uc-uq4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="O5u-z4-Y4i"/>
+                            <constraint firstItem="yND-Uc-uq4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aLi-4S-tOy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yND-Uc-uq4" secondAttribute="bottom" id="tnH-H1-R1a"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9Ns-6c-Zdg"/>
+                    <navigationItem key="navigationItem" title="Home" id="9Ns-6c-Zdg"/>
+                    <connections>
+                        <outlet property="tableView" destination="yND-Uc-uq4" id="gtK-k5-s4e"/>
+                        <segue destination="l4W-CZ-3R2" kind="push" identifier="datailViewIdentifier" id="bdy-sv-45T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1187" y="304"/>
+            <point key="canvasLocation" x="1233" y="304"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="4x9-a3-WdT">
+            <objects>
+                <viewController id="l4W-CZ-3R2" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zas-Zr-SLj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lqt-tE-qdf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fzc-31-HfK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XdF-sY-Hf8">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lqt-tE-qdf" firstAttribute="top" secondItem="XdF-sY-Hf8" secondAttribute="bottom" id="Nsn-YF-ffp"/>
+                            <constraint firstAttribute="trailing" secondItem="XdF-sY-Hf8" secondAttribute="trailing" id="aYB-lQ-yrO"/>
+                            <constraint firstItem="XdF-sY-Hf8" firstAttribute="top" secondItem="zas-Zr-SLj" secondAttribute="bottom" id="anV-Dl-hVP"/>
+                            <constraint firstItem="XdF-sY-Hf8" firstAttribute="leading" secondItem="fzc-31-HfK" secondAttribute="leading" id="oA2-cw-c2G"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="ed9-8t-CxH"/>
+                    <connections>
+                        <outlet property="webView" destination="XdF-sY-Hf8" id="UbN-Cr-zER"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="24U-i2-IGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="304"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BMD-bj-JfU">
