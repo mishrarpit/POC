@@ -50,6 +50,12 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return self.contentView.bounds.size;
+    return CGSizeMake(self.collectionView.bounds.size.width, self.contentView.bounds.size.height);
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat pageWidth = scrollView.frame.size.width;
+    NSInteger page = (NSInteger)floor((scrollView.contentOffset.x * 2.0f + pageWidth) / (pageWidth * 2.0f));
+    [self.pageControl setCurrentPage:page];
 }
 @end

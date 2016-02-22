@@ -15,8 +15,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sVD-a3-CCZ">
-                        <rect key="frame" x="0.0" y="0.0" width="327" height="179"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <rect key="frame" x="8" y="0.0" width="311" height="179"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Ruw-N5-7sg">
                             <size key="itemSize" width="327" height="179"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -36,10 +36,10 @@
                     </pageControl>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="sVD-a3-CCZ" secondAttribute="trailing" id="4I5-HE-6zn"/>
+                    <constraint firstAttribute="trailing" secondItem="sVD-a3-CCZ" secondAttribute="trailing" constant="8" id="4I5-HE-6zn"/>
                     <constraint firstAttribute="bottom" secondItem="sVD-a3-CCZ" secondAttribute="bottom" constant="20" id="DC6-fT-Lti"/>
                     <constraint firstItem="g3Y-bW-N7j" firstAttribute="leading" secondItem="ww2-u4-gMn" secondAttribute="leading" id="KYI-5w-50t"/>
-                    <constraint firstItem="sVD-a3-CCZ" firstAttribute="leading" secondItem="ww2-u4-gMn" secondAttribute="leading" id="fl1-bk-bJ3"/>
+                    <constraint firstItem="sVD-a3-CCZ" firstAttribute="leading" secondItem="ww2-u4-gMn" secondAttribute="leading" constant="8" id="fl1-bk-bJ3"/>
                     <constraint firstAttribute="trailing" secondItem="g3Y-bW-N7j" secondAttribute="trailing" id="iow-tM-qdM"/>
                     <constraint firstAttribute="bottom" secondItem="g3Y-bW-N7j" secondAttribute="bottom" constant="20" id="s4b-0q-gJb"/>
                     <constraint firstItem="sVD-a3-CCZ" firstAttribute="top" secondItem="ww2-u4-gMn" secondAttribute="top" id="zBh-d0-F6U"/>
