@@ -12,7 +12,7 @@
 - (void)itemDidSelected:(NSDictionary *)dataDict;
 @end
 
-@interface Template2TableViewCell : UITableViewCell <UICollectionViewDataSource,UICollectionViewDelegate>
+@interface Template2TableViewCell : UITableViewCell <UICollectionViewDataSource,UICollectionViewDelegate, UIScrollViewDelegate>
 
 @property (strong, nonatomic)NSArray *dataSourceArray;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;

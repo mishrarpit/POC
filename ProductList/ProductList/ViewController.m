@@ -41,7 +41,7 @@ static NSString *template3Identifier = @"Template3TableViewCellIdentifier";
 }
 - (void)prepareData {
     NSError *error;
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DataSoure1" ofType:@"json"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"DataSource2" ofType:@"json"];
     if (filePath.length) {
         NSData *data = [NSData dataWithContentsOfFile:filePath];
         if (data) {
